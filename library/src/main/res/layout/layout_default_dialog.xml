@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minWidth="200dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="提示"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@mipmap/image_close" />
+        </RelativeLayout>
+
+        <View
+            style="@style/common_line_horizontal_style"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+
+        <TextView
+            android:id="@+id/dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_1"
+            android:layout_marginRight="@dimen/default_margin_1"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:lineSpacingExtra="5dp"
+            android:text="nnnnn"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+
+        <EditText
+            android:id="@+id/tv_inputMessage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/default_margin_1"
+            android:layout_marginRight="@dimen/default_margin_1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_dialog_buttom"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColorHint="@color/color_gray"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/common_line_horizontal_style"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_dialog_buttom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_dialog_left"
+            android:text="确定"
+            android:textColor="#555555"
+            android:textSize="14sp"
+
+            />
+
+        <View
+            android:id="@+id/dialig_view"
+            style="@style/common_line_horizontal_style"
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_dialog_right"
+            android:text="取消"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

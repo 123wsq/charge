@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_title_height">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/default_main_color"
+            android:textSize="@dimen/default_title_size"
+            android:text="标题"
+            />
+        <LinearLayout
+            android:id="@+id/ll_add_data"
+            android:layout_width="@dimen/default_title_height"
+            android:layout_height="@dimen/default_title_height"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/image_add_data_icon"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/bc_BarChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+</LinearLayout>

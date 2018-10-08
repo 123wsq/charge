@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="default_main_color">#1A1B1B</color>
+    <color name="default_color_gray_1">#565656</color>
+    <color name="default_color_gray_2">#909091</color>
+    <color name="cancel_popup_color">#3F51B5</color>
+    <color name="color_theme">#27b6e2</color>
+    <color name="color_red">#FF0000</color>
+    <color name="color_gray">@color/color_disable_btn</color>
+    <color name="default_backgroud_color">#F8F8F8</color>
+    <color name="color_disable_btn">#E4E4E4</color>
+
+    <color name="color_left_gray">#E2E2E3</color>
+    <color name="color_left_1">#50d2c2</color>
+    <color name="color_left_2">#27b6e2</color>
+    <color name="color_left_3">#ee943b</color>
+    <color name="color_left_4">#f4c322</color>
+    <color name="transparent">#00000000</color>
+    <color name="line_color">@color/default_backgroud_color</color>
+
+</resources>

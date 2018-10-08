@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //防止65536
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api rootProject.ext.dependencies["appcompat-v7"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espresso"]
+    api rootProject.ext.dependencies["okhttp3"]
+    //防止65536 分包
+    api rootProject.ext.dependencies["multidex"]
+    api rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    api rootProject.ext.dependencies["SmartRefreshLayout"]
+    api rootProject.ext.dependencies["PickerView"]
+    api rootProject.ext.dependencies["banner"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["design"]
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    api rootProject.ext.dependencies["circleimageview"]
+    api rootProject.ext.dependencies["recyclerview"]
+    api rootProject.ext.dependencies["litepal"]
+    api rootProject.ext.dependencies["umeng.common"]
+    api rootProject.ext.dependencies["umeng.analytics"]
+    api rootProject.ext.dependencies["logger"]
+}

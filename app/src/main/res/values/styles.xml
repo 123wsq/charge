@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:listDivider">@drawable/shape_divider_line_bg</item>
+    </style>
+
+    <style name="defalut_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/shape_default_button</item>
+        <item name="android:text">确定</item>
+        <item name="android:textSize">@dimen/default_title_size</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/default_button_height</item>
+    </style>
+</resources>

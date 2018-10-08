@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/default_menu_height"
+    android:background="@color/transparent"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_title_height"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_margin_1"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="@dimen/default_margin_1"
+        android:background="@color/color_white"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_record"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="记录"
+            android:textColor="@drawable/selector_font_color2"
+            android:textSize="14sp" />
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"></View>
+
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@drawable/selector_font_color2"
+            android:textSize="14sp" />
+    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/ll_curData"
+        android:layout_width="@dimen/default_menu_height"
+        android:layout_height="@dimen/default_menu_height"
+        android:gravity="center"
+        android:background="@drawable/shape_menu_data"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/image_cur_data_icon"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
