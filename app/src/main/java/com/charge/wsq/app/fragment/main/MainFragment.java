@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 
 import com.charge.wsq.app.fragment.tab.CurMonthFragment;
+import com.charge.wsq.app.fragment.tab.HomeFragment;
 import com.example.wsq.library.tools.status.AppStatus;
 import com.example.wsq.library.utils.SharedTools;
 import com.charge.wsq.app.R;
@@ -31,10 +32,12 @@ public class MainFragment extends BaseFragment {
     public static final String TAG = MainFragment.class.getName();
 
     private Fragment fragments[] = {MenuFragment.getInstance(),
+            HomeFragment.getInstance(),
             CurMonthFragment.getInstance(),
             RecordFragment.getInstance(),
+            MyFragment.getInstance(),
             MyFragment.getInstance()};
-    private String[] tags = {MenuFragment.TAG, CurMonthFragment.TAG,RecordFragment.TAG, MyFragment.TAG};
+    private String[] tags = {MenuFragment.TAG, HomeFragment.TAG, CurMonthFragment.TAG,RecordFragment.TAG, MyFragment.TAG, MyFragment.TAG};
 
     private FragmentManager fragmentManager;
     private Fragment curFragment;
@@ -96,7 +99,6 @@ public class MainFragment extends BaseFragment {
      * @param position
      */
     public void onShowFragnentContent(int position) {
-        Logger.d(position);
         onEnter(fragments[position], tags[position], null, false);
 
     }

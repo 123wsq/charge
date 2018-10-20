@@ -15,6 +15,16 @@
         android:paddingTop="@dimen/default_margin_1"
         android:background="@color/color_white"
         >
+        <RadioButton
+            android:id="@+id/rb_month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="当月"
+            android:textColor="@drawable/selector_font_color2"
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/rb_record"
@@ -23,7 +33,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:gravity="center"
-            android:text="记录"
+            android:text="数据"
             android:textColor="@drawable/selector_font_color2"
             android:textSize="14sp" />
 
@@ -34,7 +44,16 @@
             android:layout_weight="1"
             android:layout_height="match_parent"></View>
 
-
+        <RadioButton
+            android:id="@+id/rb_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@drawable/selector_font_color2"
+            android:textSize="14sp" />
         <RadioButton
             android:id="@+id/rb_my"
             android:layout_width="0dp"
@@ -47,7 +66,7 @@
             android:textSize="14sp" />
     </RadioGroup>
     <LinearLayout
-        android:id="@+id/ll_curData"
+        android:id="@+id/ll_home"
         android:layout_width="@dimen/default_menu_height"
         android:layout_height="@dimen/default_menu_height"
         android:gravity="center"

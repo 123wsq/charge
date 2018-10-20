@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.example.wsq.library.view.water.MultiWaveHeader
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:mwhVelocity="1"
+                app:mwhProgress="1"
+                app:mwhGradientAngle="45"
+                app:mwhWaveHeight="50dp"
+                app:mwhColorAlpha="0.45"
+                app:mwhStartColor="#056CD0"
+                app:mwhCloseColor="#167DE1"
+                app:mwhWaves="70,25,1.4,1.4,-26\n100,5,1.4,1.2,15\n420,0,1.15,1,-10\n520,10,1.7,1.5,20"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

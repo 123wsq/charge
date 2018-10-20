@@ -22,9 +22,9 @@ public class MenuFragment extends BaseFragment implements RadioGroup.OnCheckedCh
     public static final String INTERFACE_WITHP = TAG + _INTERFACE_WITHP;
 
     @BindView(R.id.rg_menu) RadioGroup rg_menu;
-    @BindViews({R.id.rb_record, R.id.rb_my}) RadioButton[] rb_Radio;
+    @BindViews({R.id.rb_month, R.id.rb_record, R.id.rb_message, R.id.rb_my}) RadioButton[] rb_Radio;
 
-    private int[] drawableId ={R.drawable.selector_menu_record, R.drawable.selector_menu_my};
+    private int[] drawableId ={R.drawable.selector_menu_record,R.drawable.selector_menu_record, R.drawable.selector_menu_my, R.drawable.selector_menu_my};
 
     public static MenuFragment getInstance(){
         return new MenuFragment();
@@ -51,10 +51,10 @@ public class MenuFragment extends BaseFragment implements RadioGroup.OnCheckedCh
 
 
     }
-    @OnClick({R.id.ll_curData})
+    @OnClick({R.id.ll_home})
     public void onClick(View view){
         switch (view.getId()){
-            case R.id.ll_curData:
+            case R.id.ll_home:
                 mFunctionsManage.invokeFunction(INTERFACE_WITHP, 1);
                 break;
         }
@@ -64,12 +64,17 @@ public class MenuFragment extends BaseFragment implements RadioGroup.OnCheckedCh
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         try{
         switch (checkedId){
-            case R.id.rb_record:
-                    mFunctionsManage.invokeFunction(INTERFACE_WITHP, 2);
+            case R.id.rb_month:
+                mFunctionsManage.invokeFunction(INTERFACE_WITHP, 2);
                 break;
-
-            case  R.id.rb_my:
+            case R.id.rb_record:
                     mFunctionsManage.invokeFunction(INTERFACE_WITHP, 3);
+                break;
+            case R.id.rb_message:
+                mFunctionsManage.invokeFunction(INTERFACE_WITHP, 4);
+                break;
+            case  R.id.rb_my:
+                mFunctionsManage.invokeFunction(INTERFACE_WITHP, 5);
                 break;
         }
         }catch (Exception e){

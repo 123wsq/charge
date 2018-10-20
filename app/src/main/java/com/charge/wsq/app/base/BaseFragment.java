@@ -26,6 +26,7 @@ import com.example.wsq.library.tools.GlideImageLoader;
 import com.example.wsq.library.tools.Permissions.PermissionUtils;
 import com.example.wsq.library.tools.RecyclerViewDivider;
 import com.example.wsq.library.utils.DensityUtil;
+import com.example.wsq.library.utils.ToastUtils;
 import com.example.wsq.library.view.alertdialog.CustomDefaultDialog;
 import com.example.wsq.library.view.alertdialog.OnDialogClickListener;
 import com.example.wsq.library.view.loadding.LoadingDialog;
@@ -38,6 +39,8 @@ import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 import com.youth.banner.listener.OnBannerListener;
+
+import java.util.ArrayList;
 import java.util.List;
 import butterknife.ButterKnife;
 
@@ -325,7 +328,35 @@ public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragme
     }
 
 
+
     public void onInitBanner(Banner banner, final List<String> mImages, List<String> mTitles, final List<String> mLink) {
+
+        //验证传入的参数
+        if (banner == null) {
+            ToastUtils.onToast("请先初始化轮播图");
+            return;
+        }
+        if (mImages.size() ==0){
+            ToastUtils.onToast("请设置轮播图");
+            return;
+        }
+        if (mTitles== null)
+            mTitles = new ArrayList<>();
+        if (mLink == null){
+            ToastUtils.onToast("链接不能为空");
+            return;
+        }
+        if (mTitles.size() ==0 || mLink.size() ==0){
+            for (int i = 0; i < mImages.size(); i++) {
+                if (mTitles.size() != mImages.size()){
+                    mTitles.add("");
+                }
+                if (mLink.size() !=mImages.size()){
+                    mLink.add("");
+                }
+            }
+        }
+
         //设置banner样式
         banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
         //设置图片加载器
@@ -351,6 +382,7 @@ public abstract class BaseFragment<V, T extends BasePresenter<V>> extends Fragme
             @Override
             public void OnBannerClick(int position) {
 
+                if (mLink == null) return;
                 String url = mLink.get(position);
                 if (!TextUtils.isEmpty(url)) {
 //                    mFunctionsManage.invokeFunction(_INTERFACE_WITHP, FragmentIDs.F_WebFragment, url);

@@ -25,7 +25,7 @@ public class MyFragment extends BaseFragment{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.layout_fragment_main;
+        return R.layout.layout_fragment_tab_my;
     }
 
     @Override

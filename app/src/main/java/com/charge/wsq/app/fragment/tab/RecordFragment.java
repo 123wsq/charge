@@ -16,7 +16,7 @@ public class RecordFragment extends BaseFragment{
 
     public static final String TAG = RecordFragment.class.getName();
 
-
+    @BindView(R.id.tv_title) TextView tv_title;
 
     public static RecordFragment getInstance() {
         return new RecordFragment();
@@ -30,15 +30,16 @@ public class RecordFragment extends BaseFragment{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.layout_fragment_home;
+        return R.layout.layout_fragment_recycler_view;
     }
 
     @Override
     protected void initView() {
+        tv_title.setText("历史记录");
     }
 
 
-    @OnClick({R.id.tv_single_permission, R.id.tv_multiple_permission})
+    @OnClick({})
     public void onClick(View view) {
         switch (view.getId()) {
 

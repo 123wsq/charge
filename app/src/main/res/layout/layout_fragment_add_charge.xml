@@ -63,6 +63,56 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:text="类型:"
+                android:gravity="center|left"
+                android:textSize="@dimen/default_text_size"
+                />
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/image_important"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/image_pull_down_icon"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_line_height"
+        android:background="@color/line_color"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_item_height"
+        android:layout_marginLeft="@dimen/default_margin_4"
+        android:layout_marginRight="@dimen/default_margin_4"
+        android:layout_marginTop="@dimen/default_margin_2"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
                 android:text="单价:"
                 android:gravity="center|left"
                 android:textSize="@dimen/default_text_size"
@@ -83,7 +133,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/shape_edit_no_stroke"
                 android:layout_marginLeft="@dimen/default_margin_2"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -133,13 +183,56 @@
             android:layout_height="match_parent"
             android:background="@drawable/shape_edit_no_stroke"
             android:layout_marginLeft="@dimen/default_margin_2"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/default_line_height"
         android:background="@color/line_color"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_margin_4"
+        android:layout_marginRight="@dimen/default_margin_4"
+        android:layout_marginTop="@dimen/default_margin_2"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注:"
+            android:gravity="center|left"
+            android:textSize="@dimen/default_text_size"
+            />
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="100dp">
+
+               <EditText
+                   android:id="@+id/et_remarks"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/shape_edit_stroke"
+                   android:gravity="top"
+                   android:padding="5dp"
+                    />
+               <TextView
+                   android:id="@+id/tv_font_count"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="还剩 0 / 100"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_margin="5dp"
+                   android:textColor="@color/default_color_gray_2"
+                   />
+           </RelativeLayout>
+
+    </LinearLayout>
+
     <TextView
         style="@style/defalut_button"
         android:text="提交"

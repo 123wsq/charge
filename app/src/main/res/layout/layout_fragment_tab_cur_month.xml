@@ -31,13 +31,27 @@
                 />
         </LinearLayout>
     </RelativeLayout>
-
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/bc_BarChart"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="@dimen/default_line_height"
+        android:background="@color/line_color"></View>
 
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magic_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_line_height"
+        android:background="@color/line_color"></View>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 
 </LinearLayout>

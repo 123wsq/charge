@@ -71,7 +71,10 @@ ext {
             "easyrecyclerview"      : "com.jude:easyrecyclerview:4.4.2",
             "bga-swipeitemlayout"   : "cn.bingoogolapple:bga-swipeitemlayout:1.0.4@aar",
             "recyclerview-animators": "jp.wasabeef:recyclerview-animators:2.2.3",
+            //图表
             "MPAndroidChart"        : "com.github.PhilJay:MPAndroidChart:v3.0.3",
+            //
+            "MagicIndicator"        : "com.github.hackware1993:MagicIndicator:1.5.0",
 
 
     ]

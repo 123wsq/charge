@@ -8,6 +8,6 @@ import java.util.Map;
 
 public interface DefaultView extends BaseView {
 
-    void showData(Map<String, Object> data);
+    void responseData(Map<String, Object> data);
 
 }
